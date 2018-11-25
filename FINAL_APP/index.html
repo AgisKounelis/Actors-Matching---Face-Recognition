@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <title>Actors Matching</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript" src="script.js"></script>
+   <style>
+      body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+      .w3-quarter img {margin-bottom: -6px; cursor: pointer}
+      .w3-quarter {width: 16.5%;}
+      .w3-quarter img:hover {opacity: 0.6; transition: 0.3s}
+      .loading_screen_style {
+      position:   fixed;
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
+      text-align: center;
+      z-index:    1000;
+      top:        0%;
+      left:       0%;
+      height:     100%;
+      width:      100%;
+      background: rgba( 0, 0, 0, .9 );
+      }
+      hr {
+      border-top: 1px solid #000;
+      }
+   </style>
+   <body class="w3-light-grey">
+      <!-- !PAGE CONTENT! -->
+      <div id="load_screen" class="loading_screen_style" style="display:none;">
+         <h1><font id="load_text" color="white"></font></h1>
+      </div>
+      <div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+         <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">ACTORS MATCHING</span>
+         </header>
+         <form class="w3-row w3-center w3-black w3-padding-small">
+            <div class="w3-half">
+               Option #1<br>
+               <input id="imgur" class="w3-light-grey" type="file" accept="image/*" data-max-size="5000"/>
+            </div>
+            <div class="w3-half">
+               Option #2<br>
+               <input id="submit_text" type="text" class="w3-text-black w3-light-grey" placeholder="Name">
+               <button id="submit_button" type="button" class="w3-white">Submit</button>
+            </div>
+         </form>
+         <!-- Actors grid -->
+         <h3>Actors Found:</h3>
+         <div class="w3-row w3-grayscale-min">
+            <div class="w3-quarter" id="actors_column0"> </div>
+            <div class="w3-quarter" id="actors_column1"> </div>
+            <div class="w3-quarter" id="actors_column2"> </div>
+            <div class="w3-quarter" id="actors_column3"> </div>
+            <div class="w3-quarter" id="actors_column4"> </div>
+            <div class="w3-quarter" id="actors_column5"> </div>
+         </div>
+         <hr style="color:black;">
+         <!-- Movies grid -->
+         <h3>Movies Found:</h3>
+         <div class="w3-row w3-grayscale-min" id="movies_grid">
+            <!-- Created dynamically -->
+         </div>
+         <hr style="color:black;">
+         <!-- Series grid -->
+         <h3>Series Found:</h3>
+         <div class="w3-row w3-grayscale-min" id="series_grid">
+            <!-- Created dynamically -->
+         </div>
+         <!-- Modal for full size images on click-->
+         <div id="modal01" class="w3-modal w3-black" style="padding-top:0">
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+               <div class="w3-button w3-xlarge w3-display-topright" onclick="this.parentElement.parentElement.style.display='none'">×</div>
+               <img id="img01" class="w3-image">
+               <p>
+               <h3><a target="_blank" rel="noopener noreferrer" href="" id="caption"></a></h3>
+               </p>
+            </div>
+         </div>
+         <h3>
+            <div class="w3-black w3-center w3-padding-16">Created by Agisilaos Kounelis</div>
+         </h3>
+         <!-- End page content -->
+      </div>
+   </body>
+</html>
