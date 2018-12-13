@@ -12,7 +12,7 @@ A big number of people spend plenty of time watching Movies and Series. You can 
 
 ## Built With
 - HTML, CSS, JQuery
-- dlib face recognision library
+- dlib face recognision library using Python
 - SQLite
 - themoviedb API
 - imgur API
