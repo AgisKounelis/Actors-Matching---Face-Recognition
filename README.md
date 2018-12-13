@@ -50,6 +50,9 @@ Name search just makes a simple request to themoviedb and return the first resul
 - delete image if the Image-Based Search was used
 
 ## Future Updates - Current Problems
-- Currently there is a problem when a photo contains more than one actors. They are successfully recognised but the output movies are only one's.
+- ~~Problem with photos which contain more than one actors~~.
+- ~~Enter press causes page refresh when the text method is used~~.
+- ~~Some movies have no photos. That makes them disappear~~.
+- ~~Upload of the same actor isn't detected~~.
 - Image Uploading might take big amount of time when the internet connection is slow. Maybe resizing the image before the upload would help.
 - App renders images of varying size and that can be visually bad in some cases. Fixed size images would be better.

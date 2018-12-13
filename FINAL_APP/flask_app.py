@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from io import BytesIO
 import sqlite3
@@ -12,6 +12,7 @@ CORS(app) # make it accessible for requests
 
 @app.route('/actor', methods=['GET', 'POST'])
 def get_new_actor():
+
     img_id = request.args.get('id')
 
     url = 'https://api.imgur.com/3/image/' + img_id
